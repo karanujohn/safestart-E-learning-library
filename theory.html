@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#007330">
+  <title>Safe Start | Learning Library</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Safe Start home">
+      <span class="brand-mark">S</span>
+      <span><strong>Safe Start</strong><small>DRIVING SCHOOL</small></span>
+    </a>
+    <nav class="topnav">
+      <a href="#library">Learning Library</a>
+      <a href="#how-to">How to use</a>
+      <a class="contact-link" href="https://wa.me/254705332938" target="_blank" rel="noopener">Talk to us ↗</a>
+      <a class="contact-link" href="https://meet.google.com/kpx-ogbw-qgj" target="_blank" rel="noopener">join online class</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> LEARN • PRACTISE • DRIVE SAFELY</p>
+        <h1>Your road to safer driving <em>starts here.</em></h1>
+        <p class="hero-text">Read the NTSA Learner’s Handbook and other Safe Start training documents in one convenient place.</p>
+        <a class="primary-btn" href="#library">Explore documents <span>↓</span></a>
+        <div class="hero-points">
+          <span>✓ Learner resources</span><span>✓ PDF reader</span><span>✓ Learn at your pace</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="yellow-orbit"></div>
+        <div class="hero-image"><img src="flyer.jpeg" alt="Safe Start Driving School promotional flyer"></div>
+        <div class="floating-note"><span class="note-icon">▤</span><span><b>Learning Library</b><small>Your documents, in one place</small></span></div>
+      </div>
+      <div class="hero-swoosh"></div>
+    </section>
+
+    <section class="library-section" id="library">
+      <div class="section-heading">
+        <div><p class="eyebrow green">SAFE START RESOURCES</p><h2>Learning <span>Library</span></h2><p class="muted">Choose a document or upload a PDF from your device.</p></div>
+        <label class="upload-btn" for="pdfUpload">＋ Upload a PDF</label>
+        <input id="pdfUpload" type="file" accept="application/pdf,.pdf" multiple hidden>
+      </div>
+
+      <div class="library-layout">
+        <aside class="sidebar">
+          <div class="side-title"> <span id="docCount">03</span></div>
+          <label class="searchbox"><span>⌕</span><input id="searchDocs" type="search" placeholder="Search documents..."></label>
+          <div class="filter-label"></div>
+          <button class="category active" data-filter="all"><span>▦</span> All documents <b id="allCount">3</b></button>
+          <button class="category" data-filter="handbook" src="NTSA PRIVATE LIGHT VEHICLES LEARNER'S HANDBOOK (1) (1).pdf"><span>▤</span> Learner handbook <b>1</b></button>
+          <button class="category" data-filter="safety"><span>◇</span> Road safety <b>1</b></button>
+          <button class="category" data-filter="practice"><span>✓</span> Practice materials <b>1</b></button>
+          <div class="sidebar-tip"><div class="tip-icon">✦</div><b>Safe driving is a skill.</b><p>Study the rules, understand the signs, and practise responsibly.</p></div>
+        </aside>
+
+        <div class="documents-area">
+          <div class="document-grid" id="documentGrid">
+            <article class="doc-card" data-category="handbook" data-title="NTSA Learner’s Handbook">
+              <div class="doc-cover cover-red"><span class="cover-label">OFFICIAL STUDY RESOURCE</span><div class="road-sign">!</div><div class="cover-title">NTSA<br><strong>LEARNER’S<br>HANDBOOK</strong></div><div class="cover-road"></div><span class="pdf-chip">PDF DOCUMENT</span></div>
+              <div class="doc-info"><div class="doc-meta"><span class="tag tag-red">HANDBOOK</span><span class="file-type">PDF</span></div><h3>NTSA Learner’s Handbook</h3><p>Road rules, traffic signs, safe driving and learner guidance.</p><div class="doc-actions"><button class="open-doc" data-url="NTSA PRIVATE LIGHT VEHICLES LEARNER'S HANDBOOK (1) (1).pdf">Open document <span>↗</span></button><button class="icon-btn" title="Add your handbook PDF" onclick="document.getElementById('pdfUpload').click()">＋</button></div></div>
+            </article>
+            <article class="doc-card" data-category="safety" data-title="Road Safety & Traffic Signs">
+              <div class="doc-cover cover-green"><span class="cover-label">SAFE START LEARNING</span><div class="signs"><i>STOP</i><i>↗</i><i>!</i></div><div class="cover-title">ROAD SAFETY<br><strong>& TRAFFIC SIGNS</strong></div><div class="cover-road"></div><span class="pdf-chip">ADD YOUR PDF</span></div>
+              <div class="doc-info"><div class="doc-meta"><span class="tag tag-green">ROAD SAFETY</span><span class="file-type">PDF</span></div><h3>Road Safety & Traffic Signs</h3><p>Revise road signs, markings and safe road behaviour.</p><div class="doc-actions"><button class="open-doc" data-url="road signs.pdf">Open Document<span>↗</span></button><button class="icon-btn" title="Choose a PDF" onclick="document.getElementById('pdfUpload').click()">＋</button></div></div>
+            </article>
+            <article class="doc-card" data-category="practice" data-title="Learner Practice Notes">
+              <div class="doc-cover cover-yellow"><span class="cover-label">REVISION SERIES</span><div class="practice-check">✓</div><div class="cover-title dark">LEARNER<br><strong>PRACTICE NOTES</strong></div><div class="cover-road"></div><span class="pdf-chip dark-chip">ADD YOUR PDF</span></div>
+              <div class="doc-info"><div class="doc-meta"><span class="tag tag-yellow">PRACTICE</span><span class="file-type">PDF</span></div><h3>Learner Practice Notes</h3><p>Use your class notes and revision documents to prepare.</p><div class="doc-actions"><button class="open-doc" data-url="SAFE  START DRVING QUESTIONS.pdf" >Open document <span>↗</span></button><button class="icon-btn" title="Choose a PDF" onclick="document.getElementById('pdfUpload').click()">＋</button></div></div>
+            </article>
+          </div>
+          <div class="document-grid" id="documentGrid">
+            <article class="doc-card" data-category="handbook" data-title="NTSA Learner’s Handbook">
+              <div class="doc-cover cover-red"><span class="cover-label">OFFICIAL STUDY RESOURCE</span><div class="road-sign">!</div><div class="cover-title">NTSA<br><strong>LEARNER’S<br>HANDBOOK</strong></div><div class="cover-road"></div><span class="pdf-chip">PDF DOCUMENT</span></div>
+              <div class="doc-info"><div class="doc-meta"><span class="tag tag-red">HANDBOOK</span><span class="file-type">PDF</span></div><h3>NTSA Learner’s Handbook</h3><p>Road rules, traffic signs, safe driving and learner guidance.</p><div class="doc-actions"><button class="open-doc" data-url="NTSA PRIVATE LIGHT VEHICLES LEARNER'S HANDBOOK ">Open document <span>↗</span></button><button class="icon-btn" title="Add your handbook PDF" onclick="document.getElementById('pdfUpload').click()">＋</button></div></div>
+            </article>
+            <article class="doc-card" data-category="safety" data-title="Road Safety & Traffic Signs">
+              <div class="doc-cover cover-green"><span class="cover-label">SAFE START LEARNING</span><div class="signs"><i>STOP</i><i>↗</i><i>!</i></div><div class="cover-title">ROAD SAFETY<br><strong>& TRAFFIC SIGNS</strong></div><div class="cover-road"></div><span class="pdf-chip">ADD YOUR PDF</span></div>
+              <div class="doc-info"><div class="doc-meta"><span class="tag tag-green">ROAD SAFETY</span><span class="file-type">PDF</span></div><h3>Road Safety & Traffic Signs</h3><p>Revise road signs, markings and safe road behaviour.</p><div class="doc-actions"><button class="open-doc" data-url="road sign">Open Document<span>↗</span></button><button class="icon-btn" title="Choose a PDF" onclick="document.getElementById('pdfUpload').click()">＋</button></div></div>
+            </article>
+            <article class="doc-card" data-category="practice" data-title="Learner Practice Notes">
+              <div class="doc-cover cover-yellow"><span class="cover-label">REVISION SERIES</span><div class="practice-check">✓</div><div class="cover-title dark">LEARNER<br><strong>PRACTICE NOTES</strong></div><div class="cover-road"></div><span class="pdf-chip dark-chip">ADD YOUR PDF</span></div>
+              <div class="doc-info"><div class="doc-meta"><span class="tag tag-yellow">PRACTICE</span><span class="file-type">PDF</span></div><h3>Learner Practice Notes</h3><p>Use your class notes and revision documents to prepare.</p><div class="doc-actions"><button class="open-doc" data-url="SAFE  START DRVING QUESTION" >Open document <span>↗</span></button><button class="icon-btn" title="Choose a PDF" onclick="document.getElementById('pdfUpload').click()">＋</button></div></div>
+            </article>
+          </div>
+          <div class="empty-state" id="emptyState" hidden><div>⌕</div><h3>No documents found</h3><p>Try another search or upload a PDF document.</p></div>
+          <div class="upload-hint"><span class="hint-icon">↑</span><div><b>Have a training document?</b><p>Upload a PDF to read it instantly in the built-in viewer. Uploaded files stay in this browser session only.</p></div><label for="pdfUpload">Select PDF</label></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-to"><div class="how-intro"><p class="eyebrow">SIMPLE. PRACTICAL. ACCESSIBLE.</p><h2>Study smarter.<br><span>Drive safer.</span></h2><p>Use the reader tools to move through your PDF, zoom in on diagrams and search for important topics.</p></div><div class="how-steps"><div class="step"><span>01</span><div><b>Choose a document</b><p>Open an available resource or upload your own PDF.</p></div></div><div class="step"><span>02</span><div><b>Read and navigate</b><p>Use page controls, zoom, and the full-screen option.</p></div></div><div class="step"><span>03</span><div><b>Keep learning</b><p>Ask your instructor about any rule or sign you find difficult.</p></div></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="footer-brand"><span class="brand-mark">S</span>
+    <div><strong>Safe Start Driving School</strong><small>Train with the best...!!</small></div></div><div class="footer-right">
+      <span>Learn responsibly. Drive safely.</span>
+      <a href="https://wa.me/254755975348" target="_blank" rel="noopener">Enquiries: 0755 975 348 ↗</a>
+      <a href="https://wa.me/254725280553" target="_blank" rel="noopener">Enquiries: 0725 280 553 ↗</a>
+      <a href="https://wa.me/254705332938" target="_blank" rel="noopener">Enquiries: 0705 332 938 ↗</a>
+    </div></footer>
+  
+  <div class="reader-modal" id="readerModal" aria-hidden="true">
+    <div class="reader-shell">
+      <div class="reader-top"><div class="reader-doc-icon">PDF</div><div class="reader-heading"><b id="readerTitle">Document reader</b><small id="readerStatus">Ready to read</small></div><div class="reader-top-actions"><button id="downloadBtn" title="Download PDF" disabled>↓ <span>Download</span></button><button id="fullscreenBtn" title="Full screen">⛶</button><button id="closeReader" class="close-btn" title="Close reader">×</button></div></div>
+      <div class="reader-toolbar"><div class="page-controls"><button id="prevPage" disabled>‹</button><span>Page <input id="pageNumber" type="number" min="1" value="1"> <span id="pageTotal">of —</span></span><button id="nextPage" disabled>›</button></div><div class="zoom-controls"><button id="zoomOut" disabled>−</button><span id="zoomLabel">100%</span><button id="zoomIn" disabled>＋</button><button id="fitWidth">Fit width</button></div></div>
+      <div class="reader-content" id="readerContent"><div class="reader-placeholder"><div class="placeholder-icon">▤</div><h3>Your document opens here</h3><p>Choose a PDF document to start reading.</p></div></div>
+      <div class="reader-bottom"><span><span class="status-dot"></span> Safe Start Learning Library</span><span>PDF Reader</span></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
+

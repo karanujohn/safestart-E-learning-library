@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#007330">
+
+  <title>Safe Start | Learning Library</title>
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="app.js"></script>
+
+</head>
+
+<body>s
+
+  <header class="topbar">
+
+    <a class="brand" href="#" aria-label="Safe Start home">
+
+      <span class="brand-mark">S</span>
+
+      <span><strong>Safe Start</strong><small>DRIVING SCHOOL</small></span>
+
+    </a>
+
+    <nav class="topnav">
+
+      <a href="#library">Learning Library</a>
+
+      <a href="#how-to">How to use</a>
+
+      <a class="contact-link" href="https://wa.me/254755975348" target="_blank" rel="noopener">Talk to us ↗</a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-copy">
+
+        <p class="eyebrow"><span></span> LEARN • PRACTISE • DRIVE SAFELY</p>
+
+        <h1>Your road to safer driving <em>starts here.</em></h1>
+
+        <p class="hero-text">Read the NTSA Learner’s Handbook and other Safe Start training documents in one convenient place.</p>
+
+        <a class="primary-btn" href="#library">Explore documents <span>↓</span></a>
+
+        <div class="hero-points">
+
+          <span>✓ Learner resources</span><span>✓ PDF reader</span><span>✓ Learn at your pace</span>
+
+        </div>
+
+      </div>
+
+      <div class="hero-art">
+
+        <div class="yellow-orbit"></div>
+
+        <div class="hero-image"><img src="safestart-flyer.svg" alt="Safe Start Driving School promotional flyer"></div>
+
+        <div class="floating-note"><span class="note-icon">▤</span><span><b>Learning Library</b><small>Your documents, in one place</small></span></div>
+
+      </div>
+
+      <div class="hero-swoosh"></div>
+
+    </section>
+
+
+
+    <section class="library-section" id="library">
+
+      <div class="section-heading">
+
+        <div><p class="eyebrow green">SAFE START RESOURCES</p><h2>Learning <span>Library</span></h2><p class="muted">Choose a document or upload a PDF from your device.</p></div>
+
+        <label class="upload-btn" for="pdfUpload">＋ Upload a PDF</label>
+
+        <input id="pdfUpload" type="file" accept="application/pdf,.pdf" multiple hidden>
+
+      </div>
+
+
+
+      <div class="library-layout">
+
+        <aside class="sidebar">
+
+          <div class="side-title">DOCUMENTS <span id="docCount">03</span></div>
+
+          <label class="searchbox"><span>⌕</span><input id="searchDocs" type="search" placeholder="Search documents..."></label>
+
+          <div class="filter-label">CATEGORIES</div>
+
+          <button class="category active" data-filter="all"><span>▦</span> All documents <b id="allCount">3</b></button>
+
+          <button class="category" data-filter="handbook"><span>▤</span> Learner handbook <b>1</b></button>
+
+          <button class="category" data-filter="safety"><span>◇</span> Road safety <b>1</b></button>
+
+          <button class="category" data-filter="practice"><span>✓</span> Practice materials <b>1</b></button>
+
+          <div class="sidebar-tip"><div class="tip-icon">✦</div><b>Safe driving is a skill.</b><p>Study the rules, understand the signs, and practise responsibly.</p></div>
+
+        </aside>
+
+
+
+        <div class="documents-area">
+
+          <div class="document-grid" id="documentGrid">
+
+            <article class="doc-card" data-category="handbook" data-title="NTSA Learner’s Handbook">
+
+              <div class="doc-cover cover-red"><span class="cover-label">OFFICIAL STUDY RESOURCE</span><div class="road-sign">!</div><div class="cover-title">NTSA<br><strong>LEARNER’S<br>HANDBOOK</strong></div><div class="cover-road"></div><span class="pdf-chip">PDF DOCUMENT</span></div>
+
+              <div class="doc-info"><div class="doc-meta"><span class="tag tag-red">HANDBOOK</span><span class="file-type">PDF</span></div><h3>NTSA Learner’s Handbook</h3><p>Road rules, traffic signs, safe driving and learner guidance.</p><div class="doc-actions"><button class="open-doc" data-url="https://www.ntsa.go.ke/">Open document <span>↗</span></button><button class="icon-btn" title="Add your handbook PDF" onclick="document.getElementById('pdfUpload').click()">＋</button></div></div>
+
+            </article>
+
+            <article class="doc-card" data-category="safety" data-title="Road Safety & Traffic Signs">
+
+              <div class="doc-cover cover-green"><span class="cover-label">SAFE START LEARNING</span><div class="signs"><i>STOP</i><i>↗</i><i>!</i></div><div class="cover-title">ROAD SAFETY<br><strong>& TRAFFIC SIGNS</strong></div><div class="cover-road"></div><span class="pdf-chip">ADD YOUR PDF</span></div>
+
+              <div class="doc-info"><div class="doc-meta"><span class="tag tag-green">ROAD SAFETY</span><span class="file-type">PDF</span></div><h3>Road Safety & Traffic Signs</h3><p>Revise road signs, markings and safe road behaviour.</p><div class="doc-actions"><button class="open-doc" data-upload="true">Choose PDF <span>↗</span></button><button class="icon-btn" title="Choose a PDF" onclick="document.getElementById('pdfUpload').click()">＋</button></div></div>
+
+            </article>
+
+            <article class="doc-card" data-category="practice" data-title="Learner Practice Notes">
+
+              <div class="doc-cover cover-yellow"><span class="cover-label">REVISION SERIES</span><div class="practice-check">✓</div><div class="cover-title dark">LEARNER<br><strong>PRACTICE NOTES</strong></div><div class="cover-road"></div><span class="pdf-chip dark-chip">ADD YOUR PDF</span></div>
+
+              <div class="doc-info"><div class="doc-meta"><span class="tag tag-yellow">PRACTICE</span><span class="file-type">PDF</span></div><h3>Learner Practice Notes</h3><p>Use your class notes and revision documents to prepare.</p><div class="doc-actions"><button class="open-doc" data-upload="true">Choose PDF <span>↗</span></button><button class="icon-btn" title="Choose a PDF" onclick="document.getElementById('pdfUpload').click()">＋</button></div></div>
+
+            </article>
+
+          </div>
+
+          <div class="empty-state" id="emptyState" hidden><div>⌕</div><h3>No documents found</h3><p>Try another search or upload a PDF document.</p></div>
+
+          <div class="upload-hint"><span class="hint-icon">↑</span><div><b>Have a training document?</b><p>Upload a PDF to read it instantly in the built-in viewer. Uploaded files stay in this browser session only.</p></div><label for="pdfUpload">Select PDF</label></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="how-section" id="how-to"><div class="how-intro"><p class="eyebrow">SIMPLE. PRACTICAL. ACCESSIBLE.</p><h2>Study smarter.<br><span>Drive safer.</span></h2><p>Use the reader tools to move through your PDF, zoom in on diagrams and search for important topics.</p></div><div class="how-steps"><div class="step"><span>01</span><div><b>Choose a document</b><p>Open an available resource or upload your own PDF.</p></div></div><div class="step"><span>02</span><div><b>Read and navigate</b><p>Use page controls, zoom, and the full-screen option.</p></div></div><div class="step"><span>03</span><div><b>Keep learning</b><p>Ask your instructor about any rule or sign you find difficult.</p></div></div></div></section>
+
+  </main>
+
+
+
+  <footer class="footer"><div class="footer-brand"><span class="brand-mark">S</span><div><strong>Safe Start Driving School</strong><small>Train with the best...!!</small></div></div><div class="footer-right"><span>Learn responsibly. Drive safely.</span><a href="https://wa.me/254755975348" target="_blank" rel="noopener">Enquiries: 0755 975 348 ↗</a></div></footer>
+
+
+
+  <div class="reader-modal" id="readerModal" aria-hidden="true">
+
+    <div class="reader-shell">
+
+      <div class="reader-top"><div class="reader-doc-icon">PDF</div><div class="reader-heading"><b id="readerTitle">Document reader</b><small id="readerStatus">Ready to read</small></div><div class="reader-top-actions"><button id="downloadBtn" title="Download PDF" disabled>↓ <span>Download</span></button><button id="fullscreenBtn" title="Full screen">⛶</button><button id="closeReader" class="close-btn" title="Close reader">×</button></div></div>
+
+      <div class="reader-toolbar"><div class="page-controls"><button id="prevPage" disabled>‹</button><span>Page <input id="pageNumber" type="number" min="1" value="1"> <span id="pageTotal">of —</span></span><button id="nextPage" disabled>›</button></div><div class="zoom-controls"><button id="zoomOut" disabled>−</button><span id="zoomLabel">100%</span><button id="zoomIn" disabled>＋</button><button id="fitWidth">Fit width</button></div></div>
+
+      <div class="reader-content" id="readerContent"><div class="reader-placeholder"><div class="placeholder-icon">▤</div><h3>Your document opens here</h3><p>Choose a PDF document to start reading.</p></div></div>
+
+      <div class="reader-bottom"><span><span class="status-dot"></span> Safe Start Learning Library</span><span>PDF Reader</span></div>
+
+    </div>
+
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="app.js"></script>
+
+</body>
+
+
+</html>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --green:#007330;
+    --green-dark:#005b26;
+    --red:#e00712;
+    --yellow:#fddb03;
+    --ink:#151a18;
+    --muted:#69716d;
+    --cream:#fffdf5;
+    --line:#e8ece8;
+    --shadow:0 18px 55px rgba(20,45,30,.09)
+}
+
+* {
+    box-sizing:border-box
+}
+
+html {
+    scroll-behavior:smooth
+}
+
+body {
+    margin:0;
+    background:#fff;
+    color:var(--ink);
+    font-family:Inter,Arial,sans-serif
+}
+
+a {
+    color:inherit;
+    text-decoration:none
+}
+
+button,input {
+    font:inherit
+}
+
+.topbar {
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 max(5vw,24px);
+    border-bottom:1px solid #eef0ed;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:20
+}
+
+.brand,.footer-brand {
+    display:flex;
+    align-items:center;
+    gap:10px
+}
+
+.brand-mark {
+    width:43px;
+    height:43px;
+    border-radius:14px;
+    background:var(--green);
+    color:#fff;
+    display:grid;
+    place-items:center;
+    font-weight:900;
+    font-size:25px;
+    box-shadow:inset 0 -4px 0 rgba(0,0,0,.12)
+}
+
+.brand strong {
+    display:block;
+    font-size:19px;
+    font-weight:900;
+    color:var(--green);
+    letter-spacing:-.8px
+}
+
+.brand small {
+    display:block;
+    color:var(--red);
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:1.4px;
+    margin-top:1px
+}
+
+.topnav {
+    display:flex;
+    align-items:center;
+    gap:30px;
+    font-size:13px;
+    font-weight:700;
+    color:#4c5650
+}
+
+.topnav a:hover {
+    color:var(--green)
+}
+
+.topnav .contact-link {
+    padding:12px 17px;
+    border-radius:10px;
+    color:#fff;
+    background:var(--red);
+    box-shadow:0 5px 12px #e0071224
+}
+
+.hero {
+    min-height:485px;
+    display:grid;
+    grid-template-columns:1fr .9fr;
+    align-items:center;
+    padding:52px max(7vw,30px) 70px;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(112deg,#fff 0%,#fff 57%,#fff8ce 57%,#fff8ce 100%)
+}
+
+.hero-copy {
+    position:relative;
+    z-index:2;
+    max-width:600px
+}
+
+.eyebrow {
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1.8px;
+    color:var(--red);
+    display:flex;
+    align-items:center;
+    gap:9px;
+    margin:0 0 20px
+}
+
+.eyebrow span {
+    height:8px;
+    width:8px;
+    background:var(--yellow);
+    border-radius:50%;
+    box-shadow:0 0 0 4px #fddb0333
+}
+
+.hero h1 {
+    font-size:clamp(38px,5vw,64px);
+    line-height:1.04;
+    letter-spacing:-3px;
+    margin:0;
+    max-width:620px;
+    font-weight:900
+}
+
+.hero h1 em {
+    font-style:normal;
+    color:var(--green);
+    display:block
+}
+
+.hero-text {
+    max-width:470px;
+    color:#68716b;
+    line-height:1.8;
+    font-size:15px;
+    margin:22px 0 27px
+}
+
+.primary-btn {
+    display:inline-flex;
+    gap:22px;
+    align-items:center;
+    background:var(--red);
+    color:#fff;
+    padding:15px 20px;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:800;
+    box-shadow:0 8px 20px #e007122b;
+    transition:.2s
+}
+
+.primary-btn:hover {
+    transform:translateY(-2px);
+    background:#c8000b
+}
+
+.hero-points {
+    display:flex;
+    gap:17px;
+    flex-wrap:wrap;
+    margin-top:27px;
+    color:#4b5d50;
+    font-size:11px;
+    font-weight:700
+}
+
+.hero-points span:first-letter {
+    color:var(--green)
+}
+
+.hero-art {
+    height:355px;
+    position:relative;
+    display:grid;
+    place-items:center;
+    z-index:1
+}
+
+.yellow-orbit {
+    position:absolute;
+    width:360px;
+    height:360px;
+    border-radius:50%;
+    background:var(--yellow);
+    right:4%;
+    top:-4px;
+    opacity:.95
+}
+
+.hero-image {
+    position:relative;
+    width:min(320px,75%);
+    height:320px;
+    border:9px solid white;
+    border-radius:46% 46% 28% 28%;
+    overflow:hidden;
+    box-shadow:0 18px 40px #163b2222;
+    transform:rotate(2deg);
+    background:#fff
+}
+
+.hero-image img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:top center
+}
+
+.floating-note {
+    position:absolute;
+    bottom:15px;
+    left:0;
+    background:#fff;
+    border-radius:13px;
+    padding:13px 16px;
+    display:flex;
+    gap:11px;
+    align-items:center;
+    box-shadow:var(--shadow);
+    z-index:2
+}
+
+.note-icon {
+    height:38px;
+    width:38px;
+    background:#e6f5eb;
+    color:var(--green);
+    border-radius:10px;
+    display:grid;
+    place-items:center;
+    font-size:21px
+}
+
+.floating-note b,.floating-note small {
+    display:block
+}
+
+.floating-note b {
+    font-size:12px
+}
+
+.floating-note small {
+    font-size:10px;
+    color:var(--muted);
+    margin-top:4px
+}
+
+.hero-swoosh {
+    position:absolute;
+    bottom:-46px;
+    left:-3%;
+    width:108%;
+    height:75px;
+    background:var(--green);
+    border-top:10px solid var(--yellow);
+    border-radius:50% 50% 0 0/40% 40% 0 0;
+    transform:rotate(-1.4deg)
+}
+
+.library-section {
+    padding:78px max(5vw,24px) 85px;
+    background:#fff
+}
+
+.section-heading {
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:20px;
+    margin:0 auto 32px;
+    max-width:1240px
+}
+
+.eyebrow.green {
+    color:var(--green);
+    margin-bottom:12px
+}
+
+.section-heading h2,.how-intro h2 {
+    font-size:clamp(30px,3.4vw,42px);
+    letter-spacing:-1.7px;
+    line-height:1.1;
+    margin:0 0 10px;
+    font-weight:900
+}
+
+.section-heading h2 span,.how-intro h2 span {
+    color:var(--green)
+}
+
+.muted {
+    font-size:13px;
+    color:var(--muted);
+    margin:0
+}
+
+.upload-btn {
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 18px;
+    background:var(--green);
+    color:#fff;
+    border-radius:9px;
+    font-weight:800;
+    font-size:12px;
+    white-space:nowrap;
+    transition:.2s
+}
+
+.upload-btn:hover {
+    background:var(--green-dark);
+    transform:translateY(-1px)
+}
+
+.library-layout {
+    max-width:1240px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:230px 1fr;
+    gap:30px
+}
+
+.sidebar {
+    border:1px solid var(--line);
+    border-radius:15px;
+    padding:19px 14px;
+    align-self:start;
+    background:#fff
+}
+
+.side-title {
+    font-size:10px;
+    letter-spacing:1.3px;
+    font-weight:900;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:0 3px 17px
+}
+
+.side-title span {
+    background:#e9f6ed;
+    color:var(--green);
+    padding:4px 7px;
+    border-radius:6px;
+    letter-spacing:0
+}
+
+.searchbox {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#f7f9f7;
+    border:1px solid #edf0ed;
+    border-radius:8px;
+    padding:10px;
+    margin-bottom:24px;
+    color:#718077
+}
+
+.searchbox span {
+    font-size:20px
+}
+
+.searchbox input {
+    width:100%;
+    min-width:0;
+    border:0;
+    outline:0;
+    background:transparent;
+    font-size:11px
+}
+
+.filter-label {
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:1.5px;
+    color:#9aa29d;
+    margin:0 5px 10px
+}
+
+.category {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    width:100%;
+    border:0;
+    background:transparent;
+    text-align:left;
+    padding:11px 10px;
+    border-radius:8px;
+    font-size:11px;
+    font-weight:700;
+    color:#59645d;
+    cursor:pointer
+}
+
+.category span {
+    font-size:17px;
+    width:20px;
+    text-align:center
+}
+
+.category b {
+    margin-left:auto;
+    font-size:10px;
+    color:#9ba49d
+}
+
+.category:hover,.category.active {
+    background:#eaf6ed;
+    color:var(--green)
+}
+
+.category.active b {
+    color:var(--green)
+}
+
+.sidebar-tip {
+    margin-top:27px;
+    border-radius:11px;
+    padding:14px;
+    background:#fff9d9;
+    border:1px solid #f6edb4
+}
+
+.tip-icon {
+    width:26px;
+    height:26px;
+    border-radius:8px;
+    background:var(--yellow);
+    display:grid;
+    place-items:center;
+    margin-bottom:10px;
+    color:#544800
+}
+
+.sidebar-tip b {
+    font-size:11px
+}
+
+.sidebar-tip p {
+    font-size:10px;
+    line-height:1.6;
+    color:#77704b;
+    margin:7px 0 0
+}
+
+.documents-area {
+    min-width:0
+}
+
+.document-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:17px
+}
+
+.doc-card {
+    border:1px solid var(--line);
+    border-radius:13px;
+    overflow:hidden;
+    transition:transform .22s,box-shadow .22s;
+    background:#fff;
+    min-width:0
+}
+
+.doc-card:hover {
+    transform:translateY(-4px);
+    box-shadow:var(--shadow)
+}
+
+.doc-cover {
+    height:195px;
+    position:relative;
+    overflow:hidden;
+    padding:17px 16px;
+    isolation:isolate
+}
+
+.cover-red {
+    background:linear-gradient(145deg,#f4f6f4 0 36%,#e00712 36% 72%,#b8000b 72%)
+}
+
+.cover-green {
+    background:linear-gradient(145deg,#f3f8f4 0 36%,#007330 36% 72%,#005521 72%)
+}
+
+.cover-yellow {
+    background:linear-gradient(145deg,#fffdf0 0 36%,#fddb03 36% 72%,#e6c700 72%)
+}
+
+.cover-label {
+    font-size:7px;
+    letter-spacing:1.1px;
+    font-weight:900;
+    position:relative;
+    z-index:2;
+    color:#333
+}
+
+.cover-title {
+    position:relative;
+    z-index:2;
+    margin-top:21px;
+    font-size:15px;
+    line-height:1.15;
+    font-weight:600;
+    color:#fff;
+    letter-spacing:-.3px
+}
+
+.cover-title strong {
+    font-size:21px;
+    font-weight:900
+}
+
+.cover-title.dark {
+    color:#20241d
+}
+
+.road-sign {
+    position:absolute;
+    right:18px;
+    top:48px;
+    width:50px;
+    height:50px;
+    display:grid;
+    place-items:center;
+    background:#fff;
+    border:5px solid var(--red);
+    color:var(--red);
+    font-size:26px;
+    font-weight:900;
+    transform:rotate(45deg);
+    border-radius:7px;
+    box-shadow:0 3px 9px #0002
+}
+
+.road-sign::first-letter {
+    transform:rotate(-45deg)
+}
+
+.cover-road {
+    position:absolute;
+    bottom:-34px;
+    right:-13px;
+    width:130px;
+    height:95px;
+    border:10px solid #fff;
+    border-bottom:0;
+    border-radius:70% 0 0 0;
+    transform:rotate(-17deg);
+    opacity:.5
+}
+
+.pdf-chip {
+    position:absolute;
+    bottom:15px;
+    left:16px;
+    background:#fff;
+    color:var(--red);
+    font-size:7px;
+    letter-spacing:.7px;
+    font-weight:900;
+    padding:6px 8px;
+    border-radius:4px
+}
+
+.signs {
+    display:flex;
+    gap:7px;
+    position:absolute;
+    right:13px;
+    top:47px;
+    transform:rotate(6deg)
+}
+
+.signs i {
+    width:28px;
+    height:28px;
+    border:3px solid var(--red);
+    background:white;
+    color:var(--red);
+    font-style:normal;
+    font-size:7px;
+    font-weight:900;
+    display:grid;
+    place-items:center;
+    border-radius:5px
+}
+
+.signs i:nth-child(2) {
+    border-color:var(--green);
+    color:var(--green);
+    border-radius:50%
+}
+
+.signs i:nth-child(3) {
+    border-color:#d8b900;
+    color:#aa9200;
+    border-radius:50%
+}
+
+.practice-check {
+    position:absolute;
+    right:22px;
+    top:45px;
+    width:58px;
+    height:58px;
+    border:5px solid var(--green);
+    border-radius:50%;
+    color:var(--green);
+    display:grid;
+    place-items:center;
+    font-size:35px;
+    font-weight:900;
+    background:#fff
+}
+
+.dark-chip {
+    color:#252719
+}
+
+.doc-info {
+    padding:15px 14px 13px
+}
+
+.doc-meta {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:5px
+}
+
+.tag {
+    font-size:8px;
+    font-weight:900;
+    letter-spacing:.5px;
+    padding:5px 7px;
+    border-radius:5px
+}
+
+.tag-red {
+    color:var(--red);
+    background:#fff0f0
+}
+
+.tag-green {
+    color:var(--green);
+    background:#eaf7ee
+}
+
+.tag-yellow {
+    color:#6f6100;
+    background:#fff9d3
+}
+
+.file-type {
+    font-size:9px;
+    font-weight:800;
+    color:#929b95
+}
+
+.doc-info h3 {
+    font-size:13px;
+    margin:12px 0 7px;
+    letter-spacing:-.3px
+}
+
+.doc-info p {
+    font-size:10px;
+    line-height:1.65;
+    color:#7b847e;
+    min-height:34px;
+    margin:0 0 14px
+}
+
+.doc-actions {
+    border-top:1px solid #eff1ef;
+    padding-top:11px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px
+}
+
+.open-doc {
+    background:transparent;
+    border:0;
+    padding:0;
+    color:var(--green);
+    font-size:10px;
+    font-weight:900;
+    cursor:pointer;
+    text-align:left
+}
+
+.open-doc span {
+    margin-left:4px
+}
+
+.open-doc:hover {
+    color:var(--red)
+}
+
+.icon-btn {
+    border:1px solid var(--line);
+    background:white;
+    color:var(--green);
+    border-radius:7px;
+    width:29px;
+    height:29px;
+    cursor:pointer;
+    font-size:17px
+}
+
+.icon-btn:hover {
+    background:#eaf6ed
+}
+
+.upload-hint {
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:17px;
+    margin-top:20px;
+    border:1px dashed #cbd9ce;
+    background:#fbfdfb;
+    border-radius:12px
+}
+
+.hint-icon {
+    width:38px;
+    height:38px;
+    flex-shrink:0;
+    display:grid;
+    place-items:center;
+    background:#e7f5eb;
+    color:var(--green);
+    border-radius:10px;
+    font-size:22px
+}
+
+.upload-hint b {
+    font-size:11px
+}
+
+.upload-hint p {
+    font-size:10px;
+    color:#7a847d;
+    margin:5px 0 0;
+    line-height:1.5
+}
+
+.upload-hint label {
+    margin-left:auto;
+    cursor:pointer;
+    color:var(--green);
+    font-size:10px;
+    font-weight:900;
+    white-space:nowrap
+}
+
+.empty-state {
+    text-align:center;
+    padding:55px 15px;
+    color:var(--muted)
+}
+
+.empty-state>div {
+    font-size:35px;
+    color:var(--green)
+}
+
+.empty-state h3 {
+    color:var(--ink);
+    margin:10px 0
+}
+
+.empty-state p {
+    font-size:12px
+}
+
+.how-section {
+    background:#f7faf7;
+    padding:65px max(8vw,30px);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center
+}
+
+.how-intro h2 {
+    font-size:42px
+}
+
+.how-intro>p:last-child {
+    font-size:13px;
+    color:var(--muted);
+    line-height:1.8;
+    max-width:380px
+}
+
+.how-steps {
+    display:grid;
+    gap:18px
+}
+
+.step {
+    display:flex;
+    gap:17px;
+    align-items:flex-start;
+    padding:17px;
+    background:#fff;
+    border:1px solid #edf0ed;
+    border-radius:12px
+}
+
+.step>span {
+    font-size:12px;
+    font-weight:900;
+    color:var(--red);
+    background:#fff0f0;
+    padding:9px 10px;
+    border-radius:8px
+}
+
+.step b {
+    font-size:12px
+}
+
+.step p {
+    font-size:11px;
+    line-height:1.6;
+    color:var(--muted);
+    margin:5px 0 0
+}
+
+.footer {
+    padding:27px max(5vw,24px);
+    background:#111b15;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px
+}
+
+.footer .brand-mark {
+    background:var(--red)
+}
+
+.footer-brand strong,.footer-brand small {
+    display:block
+}
+
+.footer-brand strong {
+    font-size:12px
+}
+
+.footer-brand small {
+    font-size:10px;
+    color:#e4d34b;
+    margin-top:4px
+}
+
+.footer-right {
+    display:flex;
+    align-items:center;
+    gap:24px;
+    font-size:10px;
+    color:#b7c2ba
+}
+
+.footer-right a {
+    color:#fff;
+    font-weight:800
+}
+
+.reader-modal {
+    position:fixed;
+    inset:0;
+    background:rgba(8,18,12,.78);
+    z-index:100;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    backdrop-filter:blur(5px)
+}
+
+.reader-modal.open {
+    display:flex
+}
+
+.reader-shell {
+    width:min(1120px,100%);
+    height:min(900px,94vh);
+    background:#f0f2f0;
+    border-radius:15px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 25px 90px #0005
+}
+
+.reader-top {
+    height:64px;
+    flex-shrink:0;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    padding:0 18px;
+    gap:12px;
+    border-bottom:1px solid #e2e6e2
+}
+
+.reader-doc-icon {
+    width:37px;
+    height:40px;
+    background:#fff0f0;
+    color:var(--red);
+    border-radius:7px;
+    display:grid;
+    place-items:center;
+    font-size:10px;
+    font-weight:900
+}
+
+.reader-heading {
+    min-width:0;
+    flex:1
+}
+
+.reader-heading b,.reader-heading small {
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+
+.reader-heading b {
+    font-size:12px
+}
+
+.reader-heading small {
+    font-size:10px;
+    color:#7b847e;
+    margin-top:4px
+}
+
+.reader-top-actions {
+    display:flex;
+    gap:7px
+}
+
+.reader-top-actions button,.reader-toolbar button {
+    background:#fff;
+    border:1px solid #e0e5e0;
+    border-radius:7px;
+    padding:8px 11px;
+    color:#39433c;
+    font-size:12px;
+    cursor:pointer
+}
+
+.reader-top-actions button:disabled,.reader-toolbar button:disabled {
+    opacity:.35;
+    cursor:not-allowed
+}
+
+.reader-top-actions .close-btn {
+    font-size:23px;
+    padding:2px 10px;
+    color:var(--red)
+}
+
+.reader-toolbar {
+    height:49px;
+    flex-shrink:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 18px;
+    background:#fafbfa;
+    border-bottom:1px solid #e0e5e0
+}
+
+.page-controls,.zoom-controls {
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-size:11px;
+    color:#606a63
+}
+
+.page-controls button,.zoom-controls button {
+    padding:5px 10px
+}
+
+.page-controls input {
+    width:48px;
+    padding:5px;
+    border:1px solid #dce3dd;
+    border-radius:5px;
+    text-align:center;
+    font-size:11px
+}
+
+.zoom-controls #fitWidth {
+    font-size:10px
+}
+
+.reader-content {
+    flex:1;
+    overflow:auto;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:22px;
+    background:#e9ece9;
+    position:relative
+}
+
+.reader-placeholder {
+    margin:auto;
+    text-align:center;
+    color:#758078
+}
+
+.placeholder-icon {
+    font-size:48px;
+    color:var(--green)
+}
+
+.reader-placeholder h3 {
+    color:#2a342d;
+    font-size:17px
+}
+
+.reader-placeholder p {
+    font-size:12px
+}
+
+.pdf-page {
+    display:block;
+    background:white;
+    margin:0 auto 18px;
+    box-shadow:0 3px 15px #172b1b20;
+    max-width:100%;
+    height:auto
+}
+
+.reader-bottom {
+    height:32px;
+    flex-shrink:0;
+    background:#fff;
+    border-top:1px solid #e0e5e0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 17px;
+    font-size:9px;
+    color:#818a83
+}
+
+.status-dot {
+    display:inline-block;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--green);
+    margin-right:5px
+}
+
+.toast {
+    position:fixed;
+    bottom:25px;
+    left:50%;
+    transform:translate(-50%,20px);
+    background:#17251b;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:9px;
+    font-size:12px;
+    box-shadow:var(--shadow);
+    opacity:0;
+    pointer-events:none;
+    transition:.25s;
+    z-index:200;
+    max-width:90vw
+}
+
+.toast.show {
+    opacity:1;
+    transform:translate(-50%,0)
+}
+
+@media(max-width:1000px) {
+    .hero {
+        padding-left:5vw;
+        padding-right:5vw
+    }
+    .hero h1 {
+        font-size:49px
+    }
+    .document-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr))
+    }
+    .doc-card:last-child {
+        display:block
+    }
+    .hero-art {
+        height:310px
+    }
+    .yellow-orbit {
+        width:300px;
+        height:300px
+    }
+    .hero-image {
+        height:280px;
+        width:260px
+    }
+    .library-layout {
+        grid-template-columns:200px 1fr;
+        gap:20px
+    }
+    .how-section {
+        gap:35px
+    }
+
+}
+
+@media(max-width:700px) {
+    .topbar {
+        height:67px;
+        padding:0 18px
+    }
+    .topnav {
+        gap:12px
+    }
+    .topnav>a:not(.contact-link) {
+        display:none
+    }
+    .topnav .contact-link {
+        padding:10px 12px;
+        font-size:11px
+    }
+    .brand-mark {
+        width:37px;
+        height:37px
+    }
+    .brand strong {
+        font-size:17px
+    }
+    .hero {
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        padding:42px 23px 76px;
+        background:linear-gradient(160deg,#fff 0 56%,#fff8cf 56%)
+    }
+    .hero h1 {
+        font-size:43px;
+        letter-spacing:-2px
+    }
+    .hero-text {
+        font-size:13px
+    }
+    .hero-art {
+        height:290px;
+        margin-top:18px
+    }
+    .hero-image {
+        height:260px;
+        width:260px
+    }
+    .yellow-orbit {
+        width:280px;
+        height:280px;
+        right:calc(50% - 140px)
+    }
+    .floating-note {
+        left:2px;
+        bottom:4px
+    }
+    .hero-points {
+        gap:10px;
+        font-size:10px
+    }
+    .library-section {
+        padding:55px 17px
+    }
+    .section-heading {
+        align-items:flex-start;
+        flex-direction:column
+    }
+    .section-heading h2 {
+        font-size:35px
+    }
+    .upload-btn {
+        align-self:stretch;
+        justify-content:center
+    }
+    .library-layout {
+        grid-template-columns:1fr;
+        gap:17px
+    }
+    .sidebar {
+        padding:14px
+    }
+    .sidebar-tip {
+        display:none
+    }
+    .side-title {
+        margin-bottom:10px
+    }
+    .searchbox {
+        margin-bottom:12px
+    }
+    .filter-label {
+        margin-bottom:5px
+    }
+    .category {
+        display:inline-flex;
+        width:auto;
+        padding:8px;
+        font-size:10px;
+        gap:5px
+    }
+    .category b {
+        display:none
+    }
+    .document-grid {
+        grid-template-columns:1fr 1fr;
+        gap:10px
+    }
+    .doc-cover {
+        height:160px;
+        padding:12px
+    }
+    .cover-title {
+        font-size:12px;
+        margin-top:22px
+    }
+    .cover-title strong {
+        font-size:16px
+    }
+    .cover-label {
+        font-size:6px
+    }
+    .road-sign {
+        width:38px;
+        height:38px;
+        right:10px;
+        top:40px
+    }
+    .signs {
+        right:7px;
+        top:42px;
+        gap:3px
+    }
+    .signs i {
+        width:23px;
+        height:23px;
+        font-size:6px
+    }
+    .practice-check {
+        width:43px;
+        height:43px;
+        font-size:25px;
+        right:12px;
+        top:40px
+    }
+    .doc-info {
+        padding:11px 10px
+    }
+    .doc-info h3 {
+        font-size:11px;
+        line-height:1.4
+    }
+    .doc-info p {
+        font-size:9px;
+        min-height:50px
+    }
+    .tag {
+        font-size:7px
+    }
+    .open-doc {
+        font-size:9px
+    }
+    .icon-btn {
+        width:25px;
+        height:25px
+    }
+    .upload-hint {
+        align-items:flex-start;
+        padding:13px
+    }
+    .upload-hint label {
+        display:none
+    }
+    .how-section {
+        grid-template-columns:1fr;
+        padding:50px 23px;
+        gap:20px
+    }
+    .how-intro h2 {
+        font-size:37px
+    }
+    .footer {
+        align-items:flex-start;
+        flex-direction:column;
+        padding:24px
+    }
+    .footer-right {
+        align-items:flex-start;
+        flex-direction:column;
+        gap:9px
+    }
+    .reader-modal {
+        padding:0
+    }
+    .reader-shell {
+        height:100vh;
+        border-radius:0
+    }
+    .reader-top {
+        padding:0 10px;
+        gap:8px
+    }
+    .reader-top-actions button {
+        padding:7px
+    }
+    .reader-top-actions button span {
+        display:none
+    }
+    .reader-toolbar {
+        padding:0 8px;
+        gap:6px
+    }
+    .reader-toolbar button {
+        padding:6px
+    }
+    .page-controls,.zoom-controls {
+        gap:5px;
+        font-size:10px
+    }
+    .zoom-controls #fitWidth {
+        display:none
+    }
+    .reader-content {
+        padding:10px
+    }
+    .reader-heading b {
+        font-size:11px
+    }
+
+}
+
+@media(max-width:390px) {
+    .document-grid {
+        grid-template-columns:1fr
+    }
+    .doc-cover {
+        height:190px
+    }
+    .doc-info p {
+        min-height:0
+    }
+    .hero h1 {
+        font-size:38px
+    }
+    .category {
+        font-size:9px;
+        padding:7px 6px
+    }
+    .reader-toolbar {
+        flex-wrap:wrap;
+        height:auto;
+        min-height:49px;
+        padding:6px
+    }
+    .zoom-controls {
+        margin-left:auto
+    }
+
+}
+
+/* Safe Start PDF Learning Library
+
+   PDF rendering uses PDF.js (loaded from CDN). Uploads are kept in browser memory only. */
+
+if (window.pdfjsLib) {
+
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+}
+
+const uploadInput = document.getElementById('pdfUpload');
+
+const grid = document.getElementById('documentGrid');
+
+const searchInput = document.getElementById('searchDocs');
+
+const emptyState = document.getElementById('emptyState');
+
+const cards = [...document.querySelectorAll('.doc-card')];
+
+const modal = document.getElementById('readerModal');
+
+const readerContent = document.getElementById('readerContent');
+
+const readerTitle = document.getElementById('readerTitle');
+
+const readerStatus = document.getElementById('readerStatus');
+
+const pageNumberInput = document.getElementById('pageNumber');
+
+const pageTotal = document.getElementById('pageTotal');
+
+const prevBtn = document.getElementById('prevPage');
+
+const nextBtn = document.getElementById('nextPage');
+
+const zoomInBtn = document.getElementById('zoomIn');
+
+const zoomOutBtn = document.getElementById('zoomOut');
+
+const zoomLabel = document.getElementById('zoomLabel');
+
+const downloadBtn = document.getElementById('downloadBtn');
+
+let activeFilter = 'all', pdfDoc = null, currentPage = 1, scale = 1, currentUrl = null, currentFilename = 'document.pdf', renderTask = null, toastTimer = null;
+
+
+
+function toast(message) {
+
+  const el = document.getElementById('toast');
+
+  el.textContent = message; el.classList.add('show');
+
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), 3200);
+
+}
+
+function refreshCount() {
+
+  const count = document.querySelectorAll('.doc-card:not([hidden])').length;
+
+  document.getElementById('docCount').textContent = String(count).padStart(2,'0');
+
+  document.getElementById('allCount').textContent = count;
+
+}
+
+function filterCards() {
+
+  const q = searchInput.value.trim().toLowerCase();
+
+  let shown = 0;
+
+  document.querySelectorAll('.doc-card').forEach(card => {
+
+    const matchesFilter = activeFilter === 'all' || card.dataset.category === activeFilter;
+
+    const matchesSearch = (card.dataset.title || '').toLowerCase().includes(q) || card.textContent.toLowerCase().includes(q);
+
+    card.hidden = !(matchesFilter && matchesSearch);
+
+    if (!card.hidden) shown++;
+
+  });
+
+  emptyState.hidden = shown !== 0;
+
+  refreshCount();
+
+}
+
+searchInput.addEventListener('input', filterCards);
+
+document.querySelectorAll('.category').forEach(btn => btn.addEventListener('click', () => {
+
+  document.querySelectorAll('.category').forEach(b => b.classList.remove('active'));
+
+  btn.classList.add('active'); activeFilter = btn.dataset.filter; filterCards();
+
+}));
+
+document.querySelectorAll('[data-upload="true"]').forEach(btn => btn.addEventListener('click', () => uploadInput.click()));
+
+document.querySelectorAll('.open-doc[data-url]').forEach(btn => btn.addEventListener('click', () => {
+
+  toast('For the official handbook, download the PDF from NTSA or upload the copy provided by your instructor.');
+
+  window.open(btn.dataset.url, '_blank', 'noopener');
+
+}));
+
+function openModal() { modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+
+function closeModal() { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+
+document.getElementById('closeReader').addEventListener('click', closeModal);
+
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+
+document.getElementById('fullscreenBtn').addEventListener('click', async () => {
+
+  try { if (!document.fullscreenElement) await document.querySelector('.reader-shell').requestFullscreen(); else await document.exitFullscreen(); }
+
+  catch (_) { toast('Full screen is not available in this browser.'); }
+
+});
+
+uploadInput.addEventListener('change', async e => {
+
+  const files = [...e.target.files].filter(f => f.type === 'application/pdf' || f.name.toLowerCase().endsWith('.pdf'));
+
+  if (!files.length) return;
+
+  for (const file of files) {
+
+    const url = URL.createObjectURL(file);
+
+    addUploadedCard(file, url);
+
+  }
+
+  filterCards();
+
+  if (files.length === 1) await loadPdf(URL.createObjectURL(files[0]), files[0].name, files[0]);
+
+  else toast(`${files.length} PDF documents added to your library.`);
+
+  uploadInput.value = '';
+
+});
+
+function addUploadedCard(file, url) {
+
+  const card = document.createElement('article');
+
+  card.className = 'doc-card'; card.dataset.category = 'practice'; card.dataset.title = file.name;
+
+  card.innerHTML = `<div class="doc-cover cover-green"><span class="cover-label">YOUR DOCUMENT</span><div class="cover-title">SAFE START<br><strong>${escapeHtml(file.name.length > 22 ? file.name.slice(0,19)+'…' : file.name)}</strong></div><div class="cover-road"></div><span class="pdf-chip">UPLOADED PDF</span></div><div class="doc-info"><div class="doc-meta"><span class="tag tag-green">YOUR FILE</span><span class="file-type">PDF</span></div><h3>${escapeHtml(file.name)}</h3><p>${formatBytes(file.size)} · Available in this browser session.</p><div class="doc-actions"><button class="open-doc">Open document <span>↗</span></button><button class="icon-btn remove-doc" title="Remove document">×</button></div></div>`;
+
+  card.querySelector('.open-doc').addEventListener('click', () => loadPdf(url, file.name, file));
+
+  card.querySelector('.remove-doc').addEventListener('click', () => { card.remove(); URL.revokeObjectURL(url); filterCards(); toast('Document removed from the library.'); });
+
+  grid.prepend(card);
+
+}
+
+function escapeHtml(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+function formatBytes(bytes) { if (bytes < 1024) return bytes + ' B'; if (bytes < 1048576) return (bytes/1024).toFixed(1)+' KB'; return (bytes/1048576).toFixed(1)+' MB'; }
+
+async function loadPdf(url, filename, fileObject = null) {
+
+  if (!window.pdfjsLib) { toast('PDF reader could not load. Check your internet connection and reload the page.'); return; }
+
+  openModal(); readerTitle.textContent = filename; readerStatus.textContent = 'Loading PDF…';
+
+  readerContent.innerHTML = '<div class="reader-placeholder"><div class="placeholder-icon">◌</div><h3>Loading document…</h3><p>Please wait while the PDF is prepared.</p></div>';
+
+  pdfDoc = null; currentPage = 1; scale = 1; currentUrl = url; currentFilename = filename;
+
+  try {
+
+    let source;
+
+    if (fileObject) source = { data: new Uint8Array(await fileObject.arrayBuffer()) };
+
+    else source = { url };
+
+    pdfDoc = await pdfjsLib.getDocument(source).promise;
+
+    readerStatus.textContent = `${pdfDoc.numPages} pages · Ready`;
+
+    pageTotal.textContent = `of ${pdfDoc.numPages}`;
+
+    pageNumberInput.max = pdfDoc.numPages; pageNumberInput.value = 1;
+
+    [prevBtn,nextBtn,zoomInBtn,zoomOutBtn,downloadBtn].forEach(b => b.disabled = false);
+
+    downloadBtn.onclick = () => {
+
+      const a = document.createElement('a'); a.href = currentUrl; a.download = currentFilename; a.click();
+
+    };
+
+    await renderPage(1);
+
+  } catch (err) {
+
+    readerStatus.textContent = 'Could not open PDF';
+
+    readerContent.innerHTML = '<div class="reader-placeholder"><div class="placeholder-icon">!</div><h3>Unable to display this PDF</h3><p>The file may be damaged or the website may block PDF access. Try downloading the PDF and uploading it from your device.</p></div>';
+
+    [prevBtn,nextBtn,zoomInBtn,zoomOutBtn,downloadBtn].forEach(b => b.disabled = true);
+
+    console.error(err);
+
+  }
+
+}
+
+async function renderPage(num) {
+
+  if (!pdfDoc) return;
+
+  currentPage = Math.max(1, Math.min(pdfDoc.numPages, num));
+
+  pageNumberInput.value = currentPage;
+
+  prevBtn.disabled = currentPage <= 1; nextBtn.disabled = currentPage >= pdfDoc.numPages;
+
+  zoomLabel.textContent = Math.round(scale*100)+'%';
+
+  readerContent.innerHTML = '';
+
+  try {
+
+    const page = await pdfDoc.getPage(currentPage);
+
+    const viewport = page.getViewport({scale});
+
+    const canvas = document.createElement('canvas'); canvas.className = 'pdf-page';
+
+    const context = canvas.getContext('2d');
+
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.width = Math.floor(viewport.width*dpr); canvas.height = Math.floor(viewport.height*dpr);
+
+    canvas.style.width = `${viewport.width}px`; canvas.style.height = `${viewport.height}px`;
+
+    readerContent.appendChild(canvas);
+
+    if (renderTask) { try { renderTask.cancel(); } catch (_) {} }
+
+    renderTask = page.render({canvasContext:context, viewport, transform: dpr !== 1 ? [dpr,0,0,dpr,0,0] : null});
+
+    await renderTask.promise;
+
+    readerContent.scrollTop = 0;
+
+  } catch (err) { if (err.name !== 'RenderingCancelledException') console.error(err); }
+
+}
+
+prevBtn.addEventListener('click', () => renderPage(currentPage - 1));
+
+nextBtn.addEventListener('click', () => renderPage(currentPage + 1));
+
+pageNumberInput.addEventListener('change', () => renderPage(Number(pageNumberInput.value) || 1));
+
+zoomInBtn.addEventListener('click', () => { scale = Math.min(2.5, +(scale + .15).toFixed(2)); renderPage(currentPage); });
+
+zoomOutBtn.addEventListener('click', () => { scale = Math.max(.45, +(scale - .15).toFixed(2)); renderPage(currentPage); });
+
+document.getElementById('fitWidth').addEventListener('click', async () => {
+
+  if (!pdfDoc) return;
+
+  const page = await pdfDoc.getPage(currentPage);
+
+  const natural = page.getViewport({scale:1});
+
+  scale = Math.min(2, Math.max(.45, (readerContent.clientWidth - 35) / natural.width));
+
+  renderPage(currentPage);
+
+});
+
+window.addEventListener('resize', () => { if (pdfDoc && modal.classList.contains('open')) renderPage(currentPage); });
+
+filterCards();
